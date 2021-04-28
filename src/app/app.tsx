@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import styles from  './App.module.css';
-import ToolBar from './components/tool-bar/tool-bar';
-import AppBar from './components/app-bar/app-bar';
-import Output from './components/output/output';
-import ToolMap from './components/tool-map/tool-map';
+import styles from  './app.module.css';
+import ToolBar from '../components/tool-bar/tool-bar';
+import AppBar from '../components/app-bar/app-bar';
+import Output from '../components/output/output';
+import ToolMap from '../components/tool-map/tool-map';
 
 function App() {
   return (

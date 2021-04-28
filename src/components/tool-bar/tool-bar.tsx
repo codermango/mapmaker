@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './tool-bar.module.css';
 import flag1 from './flag1.png';
+import flag2 from './flag2.png';
 
 const ToolBar = () => {
   return (
@@ -23,6 +24,9 @@ const ToolBar = () => {
       <div className={styles.categoryContent}>
         <div className={styles.element}>
           <img className={styles.elementImage} src={flag1} alt="flag1" />
+        </div>
+        <div className={styles.element}>
+          <img className={styles.elementImage} src={flag2} alt="flag2" />
         </div>
       </div>
     </div>
