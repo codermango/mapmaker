@@ -1,0 +1,6 @@
+.toolMap {
+  width: 100%;
+
+  /* background-image: url(./map.png); */
+  overflow: scroll;
+}

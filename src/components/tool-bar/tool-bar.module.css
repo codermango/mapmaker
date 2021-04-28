@@ -1,0 +1,45 @@
+.toolBar {
+  background-color: #fbfbfb;
+  width: var(--tool-bar-width);
+  height: 100%;
+  border-right: var(--primary-border-style);
+  display: flex;
+}
+
+.categories {
+  width: var(--tool-bar-category-width);
+  height: 100%;
+  border-right: var(--primary-border-style);
+}
+
+.categoryItem {
+  width: var(--tool-bar-category-width);
+  height: var(--tool-bar-category-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: var(--primary-border-style);
+  cursor: pointer;
+}
+
+.categoryItem:hover {
+  background-color: var(--tool-bar-selected-bg-color);
+}
+
+.categoryContent {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tool-bar-selected-bg-color);
+}
+
+.elementImage {
+  height: 100%;
+  width: 100%;
+}
+
+.element {
+  height: 80px;
+  width: 80px;
+  /* border-right: var(--primary-border-style);
+  border-bottom: var(--primary-border-style); */
+}

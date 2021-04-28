@@ -1,0 +1,10 @@
+.appBar {
+  height: 60px;
+  border-bottom: 1px solid #dadbdb;
+}
+
+.logo {
+  width: var(--tool-bar-category-width);
+  height: 60px;
+  border-right: 1px solid #dadbdb;
+}
