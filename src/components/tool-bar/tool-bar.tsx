@@ -29,11 +29,7 @@ const ToolBar = () => {
             {x.name}
           </div>))}
       </div>
-
-      <DndProvider backend={HTML5Backend}>
-        {category?.assets ? <AssetsBoard assets={category?.assets} /> : null }
-      </DndProvider>
-      
+      {category?.assets ? <AssetsBoard assets={category?.assets} /> : null }
     </div>
   )
 }

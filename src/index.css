@@ -23,6 +23,7 @@ code {
   --tool-bar-selected-bg-color: #fff;
   
   --primary-border-style: 1px solid #dadbdb;
+  --highlight-border-style: 2px solid red;
 
   --map-max-height: 842px;
   --map-height: calc(100vh - var(--output-height) - var(--tool-bar-category-height));

@@ -1,6 +1,8 @@
 .toolMap {
   width: 100%;
-
-  /* background-image: url(./map.png); */
   overflow: scroll;
+}
+
+.toolMap.draggingOver {
+  border: var(--highlight-border-style);
 }

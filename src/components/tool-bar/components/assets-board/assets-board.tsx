@@ -15,7 +15,7 @@ const AssetsBoard: FC<IAssetsBoardProps> = (props) => {
     <div className={styles.assetsBoard}>
         {assets.map(x => (
           <div key={x.id} className={styles.element}>
-            <DraggableAsset id={x.id} url={x.url} />
+            <DraggableAsset id={x.id} url={x.url} type={x.type} />
           </div>
         ))}
       </div>
