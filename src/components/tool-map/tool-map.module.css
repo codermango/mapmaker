@@ -1,6 +1,7 @@
 .toolMap {
   width: 100%;
   overflow: scroll;
+  border: var(--primary-border-style);
 }
 
 .toolMap.draggingOver {

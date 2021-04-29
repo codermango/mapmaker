@@ -17,13 +17,13 @@ code {
 }
 
 :root {
-  --tool-bar-width: 320px;
+  --tool-bar-width: 240px;
   --tool-bar-category-width: 80px;
   --tool-bar-category-height: 80px;
   --tool-bar-selected-bg-color: #fff;
   
   --primary-border-style: 1px solid #dadbdb;
-  --highlight-border-style: 2px solid red;
+  --highlight-border-style: 1px solid red;
 
   --map-max-height: 842px;
   --map-height: calc(100vh - var(--output-height) - var(--tool-bar-category-height));
