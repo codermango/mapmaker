@@ -1,12 +1,13 @@
 import React, { useReducer } from "react";
 import { useSelector } from "react-redux";
 import { IStoreState } from "../../app/store";
-import { IToolMapAsset, IToolMapState } from "../tool-map/reducer";
+import { IDraggableAsset } from "../draggable-asset/draggable-asset";
+import { IToolMapState } from "../tool-map/reducer";
 
 import styles from "./output.module.css";
 
 const Output = () => {
-  const assets = useSelector<IStoreState, IToolMapAsset[]>(
+  const assets = useSelector<IStoreState, IDraggableAsset[]>(
     (state) => state.toolMap.assets
   );
   const parsedAssets = JSON.stringify(assets, null, 2);

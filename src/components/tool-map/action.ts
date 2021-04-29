@@ -1,6 +1,6 @@
-import { IToolMapAsset } from "./reducer";
+import { IDraggableAsset } from "../draggable-asset/draggable-asset";
 
-export const addAssetToMap = (value: IToolMapAsset) => {
+export const addAssetToMap = (value: IDraggableAsset) => {
   return {
     type: "addAssetToMap",
     payload: value,

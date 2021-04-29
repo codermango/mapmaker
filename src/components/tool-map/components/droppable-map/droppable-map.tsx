@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useDrop } from "react-dnd";
-import DraggableAsset from "../../../tool-bar/components/draggable-asset/draggable-asset";
+import DraggableAsset from "../../../draggable-asset/draggable-asset";
 import { DraggableTypes } from "../../../tool-bar/constants";
 
 export interface IDroppableMapProps {

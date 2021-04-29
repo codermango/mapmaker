@@ -1,17 +1,8 @@
 import { mockData } from "../../mockData";
-
-export interface IToolMapAsset {
-  id: string;
-  url: string;
-  type: string;
-  position: {
-    x: number;
-    y: number;
-  };
-}
+import { IDraggableAsset } from "../draggable-asset/draggable-asset";
 
 export interface IToolMapState {
-  assets: IToolMapAsset[];
+  assets: IDraggableAsset[];
 }
 
 const initialState: IToolMapState = {

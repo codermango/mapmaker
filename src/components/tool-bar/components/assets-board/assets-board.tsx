@@ -3,7 +3,7 @@ import { useDrag } from "react-dnd";
 import { DraggableTypes } from "../../constants";
 import DraggableAsset, {
   IDraggableAsset,
-} from "../draggable-asset/draggable-asset";
+} from "../../../draggable-asset/draggable-asset";
 import styles from "./assets-board.module.css";
 
 export interface IAssetsBoardProps {
