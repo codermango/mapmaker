@@ -18,3 +18,7 @@
 .action button {
   width: 100px;
 }
+
+.outputJson {
+  overflow: scroll;
+}
