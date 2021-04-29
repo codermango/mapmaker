@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import { useDrop } from 'react-dnd';
-import DraggableAsset from '../../../tool-bar/components/draggable-asset/draggable-asset';
-import { DraggableTypes } from '../../../tool-bar/constants';
+import React, { FC } from "react";
+import { useDrop } from "react-dnd";
+import DraggableAsset from "../../../tool-bar/components/draggable-asset/draggable-asset";
+import { DraggableTypes } from "../../../tool-bar/constants";
 
 export interface IDroppableMapProps {
   mapUrl: string;
@@ -13,19 +13,18 @@ const DroppableMap: FC<IDroppableMapProps> = (props) => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: DraggableTypes.ASSET,
     drop: () => {},
-    collect: monitor => ({
+    collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
-  }))
+  }));
 
-  console.log(isOver)
+  console.log(isOver);
 
   return (
     <div ref={drop}>
       <img src={mapUrl} alt="map" />
     </div>
-    
-  )
-}
+  );
+};
 
-export default DroppableMap
+export default DroppableMap;

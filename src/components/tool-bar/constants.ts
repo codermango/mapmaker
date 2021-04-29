@@ -1,3 +1,3 @@
 export const DraggableTypes = {
-  ASSET: 'asset'
-}
+  ASSET: "asset",
+};

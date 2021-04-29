@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { useDrag } from 'react-dnd';
-import { DraggableTypes } from '../../constants';
+import React, { FC } from "react";
+import { useDrag } from "react-dnd";
+import { DraggableTypes } from "../../constants";
 
 export interface IDraggableAsset {
   id: string;
@@ -14,16 +14,14 @@ const DraggableAsset: FC<IDraggableAsset> = (props) => {
     item: {
       id,
       url,
-      type
+      type,
     },
     type: DraggableTypes.ASSET,
     collect: (monitor) => ({
-      isDragging: !!monitor.isDragging()
-    })
+      isDragging: !!monitor.isDragging(),
+    }),
   }));
-  return (
-    <img ref={drag} src={url} alt={id} />
-  )
-}
+  return <img ref={drag} src={url} alt={id} />;
+};
 
-export default DraggableAsset
+export default DraggableAsset;

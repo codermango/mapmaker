@@ -15,17 +15,20 @@ export interface IToolMapState {
 }
 
 const initialState: IToolMapState = {
-  assets: []
-}
+  assets: [],
+};
 
-export const toolMapReducer = (state = initialState, action: any): IToolMapState => {
+export const toolMapReducer = (
+  state = initialState,
+  action: any
+): IToolMapState => {
   switch (action.type) {
     case "addAssetToMap":
       return {
         ...state,
-        assets: [...state.assets, action.payload]
-      }
+        assets: [...state.assets, action.payload],
+      };
     default:
       return state;
   }
-} 
+};

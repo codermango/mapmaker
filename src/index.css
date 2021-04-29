@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -21,12 +21,14 @@ code {
   --tool-bar-category-width: 80px;
   --tool-bar-category-height: 80px;
   --tool-bar-selected-bg-color: #fff;
-  
+
   --primary-border-style: 1px solid #dadbdb;
   --highlight-border-style: 1px solid red;
 
   --map-max-height: 842px;
-  --map-height: calc(100vh - var(--output-height) - var(--tool-bar-category-height));
+  --map-height: calc(
+    100vh - var(--output-height) - var(--tool-bar-category-height)
+  );
   --output-height: 200px;
   /* --output-height: calc(100vh - var(--map-height) - var(--tool-bar-category-height)); */
 }
