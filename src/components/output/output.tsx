@@ -16,8 +16,8 @@ const Output = () => {
         <button>Save to file</button>
       </div>
       <div className={styles.outputJson}>
-        <div>ponter x: {pointer.pointerX}</div>
-        <div>ponter y: {pointer.pointerY}</div>
+        {/* <div>ponter x: {pointer.pointerX}</div>
+        <div>ponter y: {pointer.pointerY}</div> */}
       </div>
     </div>
   )

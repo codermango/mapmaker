@@ -1,22 +1,29 @@
+import { mockData } from "../../mockData";
+
+export interface IToolMapAsset {
+  id: string;
+  url: string;
+  type: string;
+  position: {
+    x: number;
+    y: number;
+  };
+}
 
 export interface IToolMapState {
-  pointerX: number,
-  pointerY: number,
-  isDraggingOver: boolean;
+  assets: IToolMapAsset[];
 }
 
 const initialState: IToolMapState = {
-  pointerX: 0,
-  pointerY: 0,
-  isDraggingOver: false
+  assets: []
 }
 
 export const toolMapReducer = (state = initialState, action: any): IToolMapState => {
   switch (action.type) {
-    case "setDraggingOver":
+    case "addAssetToMap":
       return {
         ...state,
-        isDraggingOver: action.payload,
+        assets: [...state.assets, action.payload]
       }
     default:
       return state;

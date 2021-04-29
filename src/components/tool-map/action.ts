@@ -1,6 +1,8 @@
-export const setDraggingOver = (value: boolean) => {
+import { IToolMapAsset } from "./reducer";
+
+export const addAssetToMap = (value: IToolMapAsset) => {
   return {
-    type: 'setDraggingOver',
+    type: 'addAssetToMap',
     payload: value
   };
 }
