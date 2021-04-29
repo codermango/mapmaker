@@ -1,0 +1,21 @@
+.assetsBoard {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tool-bar-selected-bg-color);
+  display: flex;
+}
+
+.elementImage {
+  /* height: 100%;
+  width: 100%; */
+}
+
+.element {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-right: var(--primary-border-style);
+  border-bottom: var(--primary-border-style); */
+}
