@@ -2,9 +2,6 @@ import React, { useCallback, useState } from "react";
 import cx from "classnames";
 import styles from "./tool-bar.module.css";
 import { mockData } from "../../mockData";
-import { DndProvider, useDrag } from "react-dnd";
-import { DraggableTypes } from "./constants";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import AssetsBoard from "./components/assets-board/assets-board";
 
 export interface IToolBarProps {}

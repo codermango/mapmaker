@@ -1,8 +1,9 @@
 .output {
   border-top: var(--primary-border-style);
   height: var(--output-height);
+  width: 100%;
   display: flex;
-  flex: 1;
+  position: relative;
 }
 
 .action {
@@ -21,4 +22,6 @@
 
 .outputJson {
   overflow: scroll;
+  flex: 1;
+  margin: 0;
 }

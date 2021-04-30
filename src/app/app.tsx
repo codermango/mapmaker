@@ -12,13 +12,10 @@ function App() {
   return (
     <div className={styles.app}>
       <AppBar />
-      <DndProvider backend={HTML5Backend}>
-        <div className={styles.content}>
-          <ToolBar />
-          <ToolMap />
-        </div>
-      </DndProvider>
-
+      <div className={styles.content}>
+        <ToolBar />
+        <ToolMap />
+      </div>
       <Output />
     </div>
   );

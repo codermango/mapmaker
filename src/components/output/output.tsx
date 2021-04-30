@@ -10,7 +10,11 @@ const Output = () => {
   const assets = useSelector<IStoreState, IDraggableAsset[]>(
     (state) => state.toolMap.assets
   );
-  const parsedAssets = JSON.stringify(assets, null, 2);
+
+  const outputContent = {
+    assets: assets.map(x => ({ ...x, url: x.url.substring(0, 30) + "..." }))
+  };
+  const parsedAssets = JSON.stringify(outputContent, null, 2);
 
   return (
     <div className={styles.output}>
@@ -18,7 +22,9 @@ const Output = () => {
         <button>Display</button>
         <button>Save to file</button>
       </div>
-      <div className={styles.outputJson}>{/* {parsedAssets} */}</div>
+      <pre className={styles.outputJson}>
+        {parsedAssets}
+      </pre>
     </div>
   );
 };
