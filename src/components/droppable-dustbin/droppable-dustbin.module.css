@@ -1,0 +1,17 @@
+.deleteIcon {
+  padding: 10px;
+  border-right: var(--primary-border-style);
+  border-bottom: none;
+  
+}
+
+.deleteIcon img {
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.hover {
+  transition: transform .2s;
+  transform: scale(1.2);
+}

@@ -1,4 +1,4 @@
-.toolBar {
+.toolSidebar {
   background-color: #fbfbfb;
   width: var(--tool-bar-width);
   height: 100%;
@@ -7,10 +7,18 @@
   box-sizing: content-box;
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .categories {
   width: var(--tool-bar-category-width);
   height: 100%;
   border-right: var(--primary-border-style);
+  display: flex;
+  flex-direction: column;
 }
 
 .categoryItem {
@@ -25,4 +33,15 @@
 
 .active {
   background-color: var(--tool-bar-selected-bg-color);
+}
+
+.deleteIcon {
+  padding: 10px;
+  border-right: var(--primary-border-style);
+  border-bottom: none;
+}
+
+.deleteIcon img {
+  height: 100%;
+  width: 100%;
 }
