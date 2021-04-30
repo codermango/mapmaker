@@ -1,6 +1,4 @@
 import React, { FC } from "react";
-import { useDrag } from "react-dnd";
-import { DraggableTypes } from "../../constants";
 import DraggableAsset, {
   IDraggableAsset,
 } from "../../../draggable-asset/draggable-asset";

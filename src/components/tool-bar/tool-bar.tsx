@@ -18,8 +18,6 @@ const ToolBar = () => {
     []
   );
 
-  console.log(category);
-
   return (
     <div className={styles.toolBar}>
       <div className={styles.categories}>

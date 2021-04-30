@@ -47,7 +47,7 @@ const Output = () => {
         >
           Save level
         </a>
-        <a href="javascript" className={styles.button}>
+        <button className={styles.button}>
           Upload level
           <input
             className={styles.uploadBtn}
@@ -55,7 +55,7 @@ const Output = () => {
             id="file-selector"
             onChange={handleLoadLevel}
           />
-        </a>
+        </button>
       </div>
       <pre className={styles.outputJson}>{result}</pre>
     </div>

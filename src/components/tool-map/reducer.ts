@@ -1,4 +1,3 @@
-import { mockData } from "../../mockData";
 import { IDraggableAsset } from "../draggable-asset/draggable-asset";
 
 export interface IToolMapState {

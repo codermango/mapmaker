@@ -1,4 +1,4 @@
-import React, { MouseEvent, MouseEventHandler, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import cx from "classnames";
 import styles from "./tool-map.module.css";
 import { mockData } from "../../mockData";
