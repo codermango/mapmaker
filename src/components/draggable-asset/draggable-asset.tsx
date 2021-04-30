@@ -1,11 +1,9 @@
 import React, { FC } from "react";
 import { useDrag } from "react-dnd";
 import { DraggableTypes } from "../tool-sidebar/constants";
-export interface IDraggableAsset {
+import { IAsset } from "../tool-sidebar/tool-sidebar";
+export interface IDraggableAsset extends IAsset {
   uid?: string;
-  id: string;
-  url: string;
-  type: string;
   position?: {
     x: number;
     y: number;
@@ -28,9 +26,6 @@ const DraggableAsset: FC<IDraggableAssetProps> = (props) => {
       position,
     },
     type: DraggableTypes.ASSET,
-    // collect: (monitor) => ({
-    //   isDragging: !!monitor.isDragging(),
-    // }),
   }));
 
   return (
