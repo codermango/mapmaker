@@ -1,6 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { IToolMapState, toolMapReducer } from "../components/tool-map/reducer";
-import { IToolSidebarState, toolSidebarReducer } from "../components/tool-sidebar/reducer";
+import {
+  IToolSidebarState,
+  toolSidebarReducer,
+} from "../components/tool-sidebar/reducer";
 
 export interface IStoreState {
   toolMap: IToolMapState;
@@ -10,6 +13,6 @@ export interface IStoreState {
 export const store = configureStore<IStoreState>({
   reducer: {
     toolMap: toolMapReducer,
-    toolSidebar: toolSidebarReducer
+    toolSidebar: toolSidebarReducer,
   },
 });

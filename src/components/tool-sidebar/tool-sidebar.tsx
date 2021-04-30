@@ -8,7 +8,6 @@ import { IToolSidebarState } from "./reducer";
 import DroppableDustbin from "../droppable-dustbin/droppable-dustbin";
 import { IDraggableAsset } from "../draggable-asset/draggable-asset";
 
-
 export interface IAsset {
   id: string;
   url: string;
@@ -20,15 +19,16 @@ export interface IAssetCategory {
   assets: IAsset[];
 }
 
-
 export interface IToolSidebarProps {
   categories: IAssetCategory[];
 }
 
 const ToolSidebar = () => {
-  const toolSidebarState = useSelector<IStoreState, IToolSidebarState>(state => state.toolSidebar);
+  const toolSidebarState = useSelector<IStoreState, IToolSidebarState>(
+    (state) => state.toolSidebar
+  );
   const dispatch = useDispatch();
-  const { categories } = toolSidebarState
+  const { categories } = toolSidebarState;
   const [activeCategory, setActiveCategory] = useState("Flag");
   const category = categories.find((x) => x.name === activeCategory);
 
@@ -41,7 +41,7 @@ const ToolSidebar = () => {
 
   const handleDeleteAsset = (asset: IDraggableAsset) => {
     dispatch({ type: "deleteAssetFromMap", payload: asset });
-  }
+  };
 
   return (
     <div className={styles.toolSidebar}>

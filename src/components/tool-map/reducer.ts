@@ -22,18 +22,21 @@ export const toolMapReducer = (
         assets: [...state.assets, action.payload],
       };
     }
-      
+
     case "deleteAssetFromMap": {
       const deletingAssetIdx = state.assets.findIndex(
         (x) => x.uid === action.payload.uid
       );
-      const newAssets = [...state.assets.slice(0, deletingAssetIdx), ...state.assets.slice(deletingAssetIdx + 1)];
+      const newAssets = [
+        ...state.assets.slice(0, deletingAssetIdx),
+        ...state.assets.slice(deletingAssetIdx + 1),
+      ];
       return {
         ...state,
-        assets: newAssets
+        assets: newAssets,
       };
     }
-      
+
     case "moveAssetInMap": {
       const movingAssetIdx = state.assets.findIndex(
         (x) => x.uid === action.payload.uid
@@ -52,14 +55,14 @@ export const toolMapReducer = (
         assets: newAssets,
       };
     }
-      
+
     case "loadAssetsToMap": {
       return {
         ...state,
         assets: action.payload,
       };
     }
-      
+
     default:
       return state;
   }

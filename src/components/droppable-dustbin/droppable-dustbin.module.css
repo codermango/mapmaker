@@ -1,10 +1,10 @@
-.deleteImg{
+.deleteImg {
   height: 100%;
   width: 100%;
   cursor: default;
 }
 
 .hover {
-  transition: transform .2s;
+  transition: transform 0.2s;
   transform: scale(1.2);
 }

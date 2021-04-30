@@ -1,4 +1,4 @@
-import { mockData } from "../../mockData"
+import { mockData } from "../../mockData";
 import { IAssetCategory } from "./tool-sidebar";
 
 export interface IToolSidebarState {
@@ -6,9 +6,9 @@ export interface IToolSidebarState {
 }
 
 const initialState: IToolSidebarState = {
-  categories: mockData.categories
-}
+  categories: mockData.categories,
+};
 
 export const toolSidebarReducer = (state = initialState, action: any) => {
   return state;
-}
+};

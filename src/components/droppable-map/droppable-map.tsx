@@ -1,13 +1,13 @@
-import React, { FC, useRef } from 'react';
-import cx from 'classnames';
-import { useDrop } from 'react-dnd';
+import React, { FC, useRef } from "react";
+import cx from "classnames";
+import { useDrop } from "react-dnd";
+import { nanoid } from "@reduxjs/toolkit";
 import DraggableAsset, {
   IDraggableAsset,
 } from "../draggable-asset/draggable-asset";
 
-import styles from './droppable-map.module.css';
-import { DraggableTypes } from '../tool-sidebar/constants';
-import { nanoid } from '@reduxjs/toolkit';
+import styles from "./droppable-map.module.css";
+import { DraggableTypes } from "../tool-sidebar/constants";
 
 export interface IDroppableMapProps {
   map: string;
@@ -16,9 +16,7 @@ export interface IDroppableMapProps {
   onAddAsset: (asset: IDraggableAsset) => void;
 }
 
-
 const DroppableMap: FC<IDroppableMapProps> = (props) => {
-
   const { map, assets, onMoveAsset, onAddAsset } = props;
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -62,7 +60,7 @@ const DroppableMap: FC<IDroppableMapProps> = (props) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DroppableMap
+export default DroppableMap;
