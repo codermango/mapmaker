@@ -11,6 +11,7 @@ import { DraggableTypes } from "../tool-bar/constants";
 import DraggableAsset, {
   IDraggableAsset,
 } from "../draggable-asset/draggable-asset";
+import { nanoid } from "@reduxjs/toolkit";
 
 const ToolMap = () => {
   const mapUrl = mockData.map;
@@ -19,24 +20,28 @@ const ToolMap = () => {
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: DraggableTypes.ASSET,
-    drop: (item: any, monitor) => {
+    drop: (item: IDraggableAsset, monitor) => {
       const assetXY = monitor.getClientOffset();
       const mapPosition = imgRef?.current?.getBoundingClientRect();
 
       if (assetXY && mapPosition) {
         const assetPositionX = assetXY.x - mapPosition.x;
         const assetPositionY = assetXY.y - mapPosition.y;
+
         const assetRecord: IDraggableAsset = {
-          id: item.id,
-          url: item.url,
-          type: item.type,
+          ...item,
           position: {
             x: assetPositionX,
             y: assetPositionY,
-          },
+          }
         };
 
-        dispatch({ type: "addAssetToMap", payload: assetRecord });
+        if (item.uid) {
+          dispatch({ type: "moveAssetInMap", payload: assetRecord });
+        } else {
+          assetRecord.uid = nanoid(8);
+          dispatch({ type: "addAssetToMap", payload: assetRecord });
+        }
       }
     },
     collect: (monitor) => ({
@@ -51,24 +56,13 @@ const ToolMap = () => {
   return (
     <div className={cx(styles.toolMap, { [styles.draggingOver]: isOver })}>
       <div ref={drop} className={styles.mapWrapper}>
-        <img ref={imgRef} src={mapUrl} alt="map" />
-        {assets.map((asset, idx) => (
+        <img className={styles.map} ref={imgRef} src={mapUrl} alt="map" />
+        {assets.map((asset) => (
           <DraggableAsset
-            key={`${asset.id}-${idx}`}
-            id={asset.id}
-            url={asset.url}
-            type={asset.type}
-            position={asset.position}
+            asset={asset}
+            key={asset.uid}
           />
         ))}
-        {/* {assets.map((asset) => (
-          <img
-            className={styles.asset}
-            style={{ top: asset.position?.y, left: asset.position?.x }}
-            src={asset.url}
-            alt={asset.id}
-          />
-        ))} */}
       </div>
     </div>
   );

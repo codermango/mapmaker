@@ -5,6 +5,7 @@ import { DraggableTypes } from "../tool-bar/constants";
 import styles from "./draggable-asset.module.css";
 
 export interface IDraggableAsset {
+  uid?: string;
   id: string;
   url: string;
   type: string;
@@ -14,18 +15,25 @@ export interface IDraggableAsset {
   };
 }
 
-const DraggableAsset: FC<IDraggableAsset> = (props) => {
-  const { id, url, type, position } = props;
-  const [{ isDragging }, drag] = useDrag(() => ({
+export interface IDraggableAssetProps {
+  asset: IDraggableAsset;
+}
+
+const DraggableAsset: FC<IDraggableAssetProps> = (props) => {
+  const { asset } = props;
+  const { uid, id, url, type, position } = asset;
+  const [, drag] = useDrag<IDraggableAsset, IDraggableAsset, any>(() => ({
     item: {
+      uid,
       id,
       url,
       type,
+      position
     },
     type: DraggableTypes.ASSET,
-    collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
-    }),
+    // collect: (monitor) => ({
+    //   isDragging: !!monitor.isDragging(),
+    // }),
   }));
 
   return (

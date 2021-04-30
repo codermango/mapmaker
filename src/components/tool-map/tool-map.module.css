@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.map {
+  width: 100%;
+  min-width: 1444px;
+}
+
 .toolMap.draggingOver {
   border: var(--highlight-border-style);
 }
