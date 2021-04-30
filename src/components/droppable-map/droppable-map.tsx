@@ -29,8 +29,8 @@ const DroppableMap: FC<IDroppableMapProps> = (props) => {
       const mapPosition = imgRef?.current?.getBoundingClientRect();
 
       if (assetXY && mapPosition) {
-        const assetPositionX = assetXY.x - mapPosition.x;
-        const assetPositionY = assetXY.y - mapPosition.y;
+        const assetPositionX = assetXY.x - mapPosition.x - 16;
+        const assetPositionY = assetXY.y - mapPosition.y - 16;
 
         const assetRecord: IDraggableAsset = {
           ...item,
