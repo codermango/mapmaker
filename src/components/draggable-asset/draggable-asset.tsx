@@ -28,7 +28,7 @@ const DraggableAsset: FC<IDraggableAssetProps> = (props) => {
       id,
       url,
       type,
-      position
+      position,
     },
     type: DraggableTypes.ASSET,
     // collect: (monitor) => ({

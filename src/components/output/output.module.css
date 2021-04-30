@@ -16,8 +16,36 @@
   align-items: center;
 }
 
-.action button {
-  width: 100px;
+.button {
+  width: 160px;
+  position: relative;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.uploadBtn {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.button:hover,
+.uploadBtn:hover {
+  cursor: pointer;
+  background: #1cd322;
+  border-color: #78c3f3;
+  color: #004974;
+  text-decoration: none;
 }
 
 .outputJson {

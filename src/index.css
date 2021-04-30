@@ -28,9 +28,7 @@ code {
   --highlight-border-style: 1px solid red;
 
   --map-max-height: 842px;
-  --map-height: calc(
-    100vh - var(--output-height) - var(--app-bar-height)
-  );
+  --map-height: calc(100vh - var(--output-height) - var(--app-bar-height));
   --output-height: 300px;
   /* --output-height: calc(100vh - var(--map-height) - var(--tool-bar-category-height)); */
 }

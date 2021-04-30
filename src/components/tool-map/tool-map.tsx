@@ -31,7 +31,7 @@ const ToolMap = () => {
           position: {
             x: assetPositionX,
             y: assetPositionY,
-          }
+          },
         };
 
         if (item.uid) {
@@ -56,10 +56,7 @@ const ToolMap = () => {
       <div ref={drop} className={styles.mapWrapper}>
         <img className={styles.map} ref={imgRef} src={mapUrl} alt="map" />
         {assets.map((asset) => (
-          <DraggableAsset
-            asset={asset}
-            key={asset.uid}
-          />
+          <DraggableAsset asset={asset} key={asset.uid} />
         ))}
       </div>
     </div>

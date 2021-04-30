@@ -1,7 +1,9 @@
 .assetsBoard {
-  width: 100%;
+  width: calc(var(--tool-bar-category-width) * 2);
   background-color: var(--tool-bar-selected-bg-color);
   display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .element {
