@@ -1,14 +1,7 @@
-.deleteIcon {
-  padding: 10px;
-  border-right: var(--primary-border-style);
-  border-bottom: none;
-  
-}
-
-.deleteIcon img {
+.deleteImg{
   height: 100%;
   width: 100%;
- 
+  cursor: default;
 }
 
 .hover {
