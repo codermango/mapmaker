@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="appBar"
+>
+  In order for the tool to work properly, please make sure your broswer zoom is 100%
+</div>
+`;

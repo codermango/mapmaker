@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in map 1`] = `
+<img
+  alt="testId1"
+  src="testUrl1"
+  style={
+    Object {
+      "left": 100,
+      "position": "absolute",
+      "top": 100,
+    }
+  }
+/>
+`;
+
+exports[`renders correctly in tool sidebar 1`] = `
+<img
+  alt="testId1"
+  src="testUrl1"
+/>
+`;
