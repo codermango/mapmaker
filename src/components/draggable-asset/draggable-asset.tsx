@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useDrag } from "react-dnd";
-import { DraggableTypes } from "../tool-bar/constants";
+import { DraggableTypes } from "../tool-sidebar/constants";
 export interface IDraggableAsset {
   uid?: string;
   id: string;

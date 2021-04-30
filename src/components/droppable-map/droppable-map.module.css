@@ -1,0 +1,23 @@
+.droppableMap {
+  width: 100%;
+  overflow: scroll;
+  border: var(--primary-border-style);
+}
+
+.mapWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  min-width: 1444px;
+}
+
+.droppableMap.draggingOver {
+  border: var(--highlight-border-style);
+}
+
+.asset {
+  position: absolute;
+}

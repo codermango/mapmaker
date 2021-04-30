@@ -1,12 +1,12 @@
 import React, { useCallback, useState } from "react";
 import cx from "classnames";
-import styles from "./tool-bar.module.css";
+import styles from "./tool-sidebar.module.css";
 import { mockData } from "../../mockData";
 import AssetsBoard from "./components/assets-board/assets-board";
 
 export interface IToolBarProps {}
 
-const ToolBar = () => {
+const ToolSidebar = () => {
   const categories = mockData.categories;
   const [activeCategory, setActiveCategory] = useState("Flag");
   const category = categories.find((x) => x.name === activeCategory);
@@ -38,4 +38,4 @@ const ToolBar = () => {
   );
 };
 
-export default ToolBar;
+export default ToolSidebar;
