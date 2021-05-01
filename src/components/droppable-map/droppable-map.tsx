@@ -4,10 +4,21 @@ import { useDrop } from "react-dnd";
 import { nanoid } from "@reduxjs/toolkit";
 import DraggableAsset, {
   IDraggableAsset,
+  IPosition,
 } from "../draggable-asset/draggable-asset";
 
 import styles from "./droppable-map.module.css";
 import { DraggableTypes } from "../tool-sidebar/constants";
+
+export const relativePosition = (
+  assetPosition: IPosition,
+  targetPosition: IPosition
+) => {
+  return {
+    x: assetPosition.x - targetPosition.x - 16,
+    y: assetPosition.y - targetPosition.y - 16,
+  };
+};
 
 export interface IDroppableMapProps {
   map: string;
@@ -27,8 +38,10 @@ const DroppableMap: FC<IDroppableMapProps> = (props) => {
       const mapPosition = imgRef?.current?.getBoundingClientRect();
 
       if (assetXY && mapPosition) {
-        const assetPositionX = assetXY.x - mapPosition.x - 16;
-        const assetPositionY = assetXY.y - mapPosition.y - 16;
+        const { x: assetPositionX, y: assetPositionY } = relativePosition(
+          { x: assetXY.x, y: assetXY.y },
+          { x: mapPosition.x, y: mapPosition.y }
+        );
 
         const assetRecord: IDraggableAsset = {
           ...item,

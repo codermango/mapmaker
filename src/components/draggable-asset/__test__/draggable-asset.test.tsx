@@ -1,6 +1,6 @@
 import React from "react";
 import { useDrag } from "react-dnd";
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import DraggableAsset, { IDraggableAsset } from "../draggable-asset";
 
@@ -11,20 +11,19 @@ jest.mock("react-dnd");
 const mockAssetSidebar: IDraggableAsset = {
   id: "testId1",
   url: "testUrl1",
-  type: "testType1"
-}
+  type: "testType1",
+};
 
 const mockAssetMap: IDraggableAsset = {
   uid: "testUid1",
   position: {
     x: 100,
-    y: 100
+    y: 100,
   },
   id: "testId1",
   url: "testUrl1",
-  type: "testType1"
-}
-
+  type: "testType1",
+};
 
 beforeEach(() => {
   useDrag.mockReturnValue([]);

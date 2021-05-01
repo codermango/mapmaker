@@ -31,7 +31,7 @@ test("renders correctly", () => {
     .create(
       <Provider store={store}>
         <DndProvider backend={HTML5Backend}>
-        <App />
+          <App />
         </DndProvider>
       </Provider>
     )

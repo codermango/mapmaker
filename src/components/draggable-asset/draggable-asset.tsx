@@ -2,12 +2,14 @@ import React, { FC } from "react";
 import { useDrag } from "react-dnd";
 import { DraggableTypes } from "../tool-sidebar/constants";
 import { IAsset } from "../tool-sidebar/tool-sidebar";
+
+export interface IPosition {
+  x: number;
+  y: number;
+}
 export interface IDraggableAsset extends IAsset {
   uid?: string;
-  position?: {
-    x: number;
-    y: number;
-  };
+  position?: IPosition;
 }
 
 export interface IDraggableAssetProps {
