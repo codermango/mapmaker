@@ -30,12 +30,16 @@ beforeEach(() => {
 });
 
 test("renders correctly in tool sidebar", () => {
-  const tree = renderer.create(<DraggableAsset asset={mockAssetSidebar} />);
+  const tree = renderer
+    .create(<DraggableAsset asset={mockAssetSidebar} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 test("renders correctly in map", () => {
-  const tree = renderer.create(<DraggableAsset asset={mockAssetMap} />);
+  const tree = renderer
+    .create(<DraggableAsset asset={mockAssetMap} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 

@@ -43,7 +43,6 @@
 .uploadBtn:hover {
   cursor: pointer;
   background: #1cd322;
-  border-color: #78c3f3;
   color: #004974;
   text-decoration: none;
 }
