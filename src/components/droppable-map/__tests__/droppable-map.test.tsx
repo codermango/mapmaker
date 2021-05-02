@@ -1,13 +1,8 @@
-import React from "react";
-import { useDrop, useDrag } from "react-dnd";
-import { render, fireEvent, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
 import DroppableMap, {
   IDroppableMapProps,
   relativePosition,
 } from "../droppable-map";
-
-jest.mock("react-dnd");
+import { renderWithDnd } from "../../../testHelper";
 
 const mockProps: IDroppableMapProps = {
   map: "testMap1",
@@ -37,20 +32,10 @@ const mockProps: IDroppableMapProps = {
   onMoveAsset: jest.fn(),
 };
 
-beforeEach(() => {
-  useDrop.mockReturnValue([{ isOver: true }, null]);
-  useDrag.mockReturnValue([]);
-});
-
 test("renders correctly", () => {
-  const tree = renderer.create(<DroppableMap {...mockProps} />);
-  expect(tree).toMatchSnapshot();
-});
-
-test("onDrop is triggered", () => {
-  const { container } = render(<DroppableMap {...mockProps} />);
-  fireEvent.drop(container);
-  expect(useDrop).toBeCalledTimes(1);
+  expect(
+    renderWithDnd(<DroppableMap {...mockProps} />).asFragment
+  ).toMatchSnapshot();
 });
 
 test("relativePosition return correct data", () => {

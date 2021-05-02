@@ -32,6 +32,11 @@ beforeEach(() => {
   useSelector.mockReturnValue(mockAssets);
 });
 
+test("render correctly", () => {
+  // render(<Output />);
+  expect(render(<Output />).asFragment()).toMatchSnapshot();
+});
+
 test("render action buttons correctly", () => {
   render(<Output />);
   expect(screen.getByText("Display")).toBeInTheDocument();

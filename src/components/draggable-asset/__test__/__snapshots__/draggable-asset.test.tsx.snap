@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly in map 1`] = `
-<img
-  alt="testId1"
-  src="testUrl1"
-  style={
-    Object {
-      "left": 100,
-      "position": "absolute",
-      "top": 100,
-    }
-  }
-/>
+<DocumentFragment>
+  <img
+    alt="testId1"
+    draggable="true"
+    src="testUrl1"
+    style="position: absolute; top: 100px; left: 100px;"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders correctly in tool sidebar 1`] = `
-<img
-  alt="testId1"
-  src="testUrl1"
-/>
+<DocumentFragment>
+  <img
+    alt="testId1"
+    draggable="true"
+    src="testUrl1"
+  />
+</DocumentFragment>
 `;

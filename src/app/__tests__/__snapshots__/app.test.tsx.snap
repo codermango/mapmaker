@@ -1,146 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="app"
->
+<DocumentFragment>
   <div
-    className="appBar"
-  >
-    In order for the tool to work properly, please make sure your broswer zoom is 100%
-  </div>
-  <div
-    className="content"
+    class="app"
   >
     <div
-      className="toolSidebar"
+      class="appBar"
+    >
+      In order for the tool to work properly, please make sure your broswer zoom is 100%
+    </div>
+    <div
+      class="content"
     >
       <div
-        className="sidebar"
+        class="toolSidebar"
       >
         <div
-          className="categories"
+          class="sidebar"
         >
           <div
-            className="categoryItem active"
-            onClick={[Function]}
+            class="categories"
           >
-            Flag
+            <div
+              class="categoryItem active"
+            >
+              Flag
+            </div>
+            <div
+              class="categoryItem"
+            >
+              Vehicle
+            </div>
+            <div
+              class="categoryItem"
+            >
+              Aircraft
+            </div>
+            <div
+              class="categoryItem"
+            >
+              Ship
+            </div>
           </div>
           <div
-            className="categoryItem"
-            onClick={[Function]}
+            class="categoryItem deleteIcon"
           >
-            Vehicle
-          </div>
-          <div
-            className="categoryItem"
-            onClick={[Function]}
-          >
-            Aircraft
-          </div>
-          <div
-            className="categoryItem"
-            onClick={[Function]}
-          >
-            Ship
+            <img
+              alt="dustbin"
+              class="deleteImg"
+              src="delete.png"
+            />
           </div>
         </div>
         <div
-          className="categoryItem deleteIcon"
+          class="assetsBoard"
         >
-          <img
-            alt="dustbin"
-            className="deleteImg"
-            src="delete.png"
-          />
+          <div
+            class="element"
+          >
+            <img
+              alt="flag1"
+              draggable="true"
+              src="flag1.png"
+            />
+          </div>
+          <div
+            class="element"
+          >
+            <img
+              alt="flag2"
+              draggable="true"
+              src="flag2.png"
+            />
+          </div>
+          <div
+            class="element"
+          >
+            <img
+              alt="flag3"
+              draggable="true"
+              src="flag3.png"
+            />
+          </div>
+          <div
+            class="element"
+          >
+            <img
+              alt="flag4"
+              draggable="true"
+              src="flag4.png"
+            />
+          </div>
         </div>
       </div>
       <div
-        className="assetsBoard"
+        class="droppableMap"
       >
         <div
-          className="element"
+          class="mapWrapper"
         >
           <img
-            alt="flag1"
-            src="flag1.png"
-          />
-        </div>
-        <div
-          className="element"
-        >
-          <img
-            alt="flag2"
-            src="flag2.png"
-          />
-        </div>
-        <div
-          className="element"
-        >
-          <img
-            alt="flag3"
-            src="flag3.png"
-          />
-        </div>
-        <div
-          className="element"
-        >
-          <img
-            alt="flag4"
-            src="flag4.png"
+            alt="map"
+            class="map"
+            src="map.png"
           />
         </div>
       </div>
     </div>
     <div
-      className="droppableMap"
+      class="output"
     >
       <div
-        className="mapWrapper"
+        class="action"
       >
-        <img
-          alt="map"
-          className="map"
-          src="map.png"
-        />
+        <button
+          class="button"
+        >
+          Display
+        </button>
+        <a
+          class="button"
+          download="level.json"
+          href="data:application/octet-stream,[]"
+        >
+          Save level
+        </a>
+        <button
+          class="button"
+        >
+          Upload level
+          <input
+            class="uploadBtn"
+            id="file-selector"
+            type="file"
+          />
+        </button>
       </div>
+      <pre
+        class="outputJson"
+      />
     </div>
   </div>
-  <div
-    className="output"
-  >
-    <div
-      className="action"
-    >
-      <button
-        className="button"
-        onClick={[Function]}
-      >
-        Display
-      </button>
-      <a
-        className="button"
-        download="level.json"
-        href="data:application/octet-stream,[]"
-      >
-        Save level
-      </a>
-      <button
-        className="button"
-      >
-        Upload level
-        <input
-          className="uploadBtn"
-          id="file-selector"
-          onChange={[Function]}
-          type="file"
-        />
-      </button>
-    </div>
-    <pre
-      className="outputJson"
-    />
-  </div>
-</div>
+</DocumentFragment>
 `;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="output"
+  >
+    <div
+      class="action"
+    >
+      <button
+        class="button"
+      >
+        Display
+      </button>
+      <a
+        class="button"
+        download="level.json"
+        href="data:application/octet-stream,[{\\"uid\\":\\"testUid1\\",\\"position\\":{\\"x\\":100,\\"y\\":100},\\"id\\":\\"testId1\\",\\"url\\":\\"testUrl1\\",\\"type\\":\\"testType1\\"},{\\"uid\\":\\"testUid2\\",\\"position\\":{\\"x\\":200,\\"y\\":200},\\"id\\":\\"testId2\\",\\"url\\":\\"testUrl2\\",\\"type\\":\\"testType2\\"}]"
+      >
+        Save level
+      </a>
+      <button
+        class="button"
+      >
+        Upload level
+        <input
+          class="uploadBtn"
+          id="file-selector"
+          type="file"
+        />
+      </button>
+    </div>
+    <pre
+      class="outputJson"
+    />
+  </div>
+</DocumentFragment>
+`;
