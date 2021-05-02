@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Mapmaker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## The steps to setup the project
+  1. Go to the root path of the project
+  2. Install necessary dependencies: `yarn`
+  3. Run the project in dev mode: `yarn start`
 
-In the project directory, you can run:
+## Functionalities
+![image](https://user-images.githubusercontent.com/4600839/116824787-4b2ddc80-ab8c-11eb-874b-090f54b45171.png)
 
-### `yarn start`
+> Please make sure your broswer zoom is 100%, otherwise the map will not have correct positions.Map
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mapmaker basically consists three main parts, **Sidebar**, **Map** and **Output**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Sidebar is the place displays all the assets mapmaker has, in our case there are flag, vehicle, aircraft and ship, it is designed extensible, so you can add move assets as long as they are added to the data source, check `src/mockData.ts`
 
-### `yarn test`
+Map is the place you can put the assets, you can drag the asset from the sidebar and drop it in the map. If you want to remove an asset from the map, you can drag it to the `delete icon` in the sidebar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Output is the place displays the result. Click the Display button will show the assets information on the map, for exmaple:
+```
+[
+  {
+    "uid": "TmXfkbD8",
+    "id": "flag1",
+    "url": "data:image/png;base64,iVBORw0K...",
+    "type": "flag",
+    "position": {
+      "x": 52,
+      "y": 110
+    }
+  },
+  {
+    "uid": "7yu9nfap",
+    "id": "vehicle1",
+    "url": "data:image/png;base64,iVBORw0K...",
+    "type": "vehicle",
+    "position": {
+      "x": 98,
+      "y": 132
+    }
+  },
+  {
+    "uid": "xQ2CHejt",
+    "id": "aircraft4",
+    "url": "data:image/jpeg;base64,/9j/4AA...",
+    "type": "aircraft",
+    "position": {
+      "x": 162,
+      "y": 150
+    }
+  }
+]
+```
 
-### `yarn build`
+> I shortened the url for a better display
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can also save the level you created by click `Save level`, you will need to find a place to save the file as json.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+You also can load the level data you have saved before, there are already some levels I created before, check the folder `levels/`
