@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   2. Install necessary dependencies: `yarn`
   3. Run the project in dev mode: `yarn start`
 
+Or you can checkout my github repo https://github.com/codermango/mapmaker.
+
 > If you cannot wait to see how it looks like, you can checkout at https://mapmaker-codemango.netlify.app
 
 ## Functionalities
