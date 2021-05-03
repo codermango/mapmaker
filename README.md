@@ -25,6 +25,11 @@ Or you can checkout my github repo https://github.com/codermango/mapmaker.
 5. Save level info in JSON file
 6. Upload level info from a JSON file
 
+Some other functionalities might be useful, but not done in this project:
+7. Save level info includes map
+8. Support replacing map and assets source in the sidebar
+9. Force zoom to 100% or detect it and give alert
+
 ### Detail
 
 Mapmaker basically consists three main parts, **Sidebar**, **Map** and **Output**.
