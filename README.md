@@ -14,7 +14,7 @@ Or you can checkout my github repo https://github.com/codermango/mapmaker.
 ## Functionalities
 ![image](https://user-images.githubusercontent.com/4600839/116824787-4b2ddc80-ab8c-11eb-874b-090f54b45171.png)
 
-> Please make sure your broswer zoom is 100%, otherwise the map will not have correct positions.Map
+> **Please make sure your broswer zoom is 100%, otherwise the map will not have correct positions.**
 
 ### Functionality list
 
