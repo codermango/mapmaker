@@ -1,10 +1,6 @@
-import React from "react";
-import { useDrag } from "react-dnd";
-import { render, fireEvent } from "@testing-library/react";
-import renderer from "react-test-renderer";
+import { fireEvent } from "@testing-library/react";
 import DraggableAsset, { IDraggableAsset } from "../draggable-asset";
-import { renderWithDnd, renderWithReduxAndDnd } from "../../../testHelper";
-import userEvent from "@testing-library/user-event";
+import { renderWithDnd } from "../../../testHelper";
 
 const mockAssetSidebar: IDraggableAsset = {
   id: "testId1",
